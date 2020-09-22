@@ -1,8 +1,9 @@
 import PyPDF2
-
+file1=raw_input("Enter name of first file: ")
+file2=raw_input("Enter name of second file: ")
 #Access and open the files to merge
-pdfFile_1=open('pdfFiles/Resume_Vikram_Singh.pdf','rb')
-pdfFile_2=open('pdfFiles/SMART_Sales.pdf','rb')
+pdfFile_1=open("%s" %file1 + '.pdf','rb')
+pdfFile_2=open("%s" %file2 + '.pdf','rb')
 
 #Read the two files
 pdfRead_1=PyPDF2.PdfFileReader(pdfFile_1)
